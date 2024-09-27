@@ -66,7 +66,7 @@ const PackageCard = () => {
                   <button>Enquiry Now</button>
                 </div>
                 <div className="contactButton">
-                  <button>Call Now</button>
+                  <a href="tel:+91 7836098136"><button>Call Now</button></a>
                 </div>
               </div>
             </div>
