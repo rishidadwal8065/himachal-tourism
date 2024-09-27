@@ -10,7 +10,7 @@ const Form = () => {
     const formData = new FormData(event.target);
 
     // Append access key
-    formData.append("access_key", "1657478b-085d-4801-b4b5-368329e3b44b");
+    formData.append("access_key", "652de30f-937e-4626-9dbd-e62c44ee6254");
 
     // Convert FormData to JSON
     const object = Object.fromEntries(formData);
