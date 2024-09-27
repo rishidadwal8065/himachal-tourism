@@ -1,0 +1,10 @@
+.top-packages{
+    width: 100%;
+    padding: 10vh 10vw;
+    display: flex;
+    flex-direction: column  ;
+    display: none;
+}
+.package-card-container{
+    margin-top: 8vh;
+}

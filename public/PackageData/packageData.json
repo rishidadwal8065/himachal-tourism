@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "title": "MANALI VOLVO PACKAGE FOR COUPLE",
+      "duration": "02 Nights / 03 Days",
+      "placesCovered": "Manali",
+      "price": "₹ 30,000",
+      "originalPrice": "₹ 32,999",
+      "discount": "GET 20% OFF *",
+      "image": "/assests/package-card1.jpg",
+      "services": [
+        "Accommodation on twin sharing / triple sharing.",
+        "Manali sightseen",
+        "Volvo Tickets Both side",
+        "Separate cab for sightseen.",
+        "Free pick up & drop from Bus Stand to Hotel",
+        "Free wifi"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "GOA BEACH HOLIDAY PACKAGE",
+      "duration": "03 Nights / 04 Days",
+      "placesCovered": "Goa",
+      "price": "₹ 25,000",
+      "originalPrice": "₹ 27,999",
+      "discount": "GET 15% OFF *",
+      "image": "/assests/package-card1.jpg",
+      "services": [
+        "Accommodation on twin sharing.",
+        "Beach sightseen",
+        "Welcome drinks on arrival",
+        "Free wifi",
+        "Free pick up & drop from Bus Stand to Hotel",
+        "Free breakfast & dinner"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "KERALA BACKWATER PACKAGE",
+      "duration": "04 Nights / 05 Days",
+      "placesCovered": "Alleppey, Kumarakom",
+      "price": "₹ 45,000",
+      "originalPrice": "₹ 50,999",
+      "discount": "GET 10% OFF *",
+      "image": "/assests/package-card1.jpg",
+      "services": [
+        "Accommodation in houseboat",
+        "Backwater cruise",
+        "Cultural show",
+        "Breakfast & Dinner included",
+        "Free pick up & drop from Bus Stand to Hotel",
+        "Free wifi"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "LEH-LADAKH ADVENTURE PACKAGE",
+      "duration": "05 Nights / 06 Days",
+      "placesCovered": "Leh, Nubra Valley",
+      "price": "₹ 60,000",
+      "originalPrice": "₹ 65,999",
+      "discount": "GET 8% OFF *",
+      "image": "/assests/package-card1.jpg",
+      "services": [
+        "Accommodation in tents and hotels",
+        "Mountain trekking",
+        "All meals included",
+        "Separate cab for sightseen",
+        "Free pick up & drop from Bus Stand to Hotel",
+        "Free wifi"
+      ]
+    }
+  ]
+  
