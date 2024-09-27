@@ -2,12 +2,18 @@
     display: flex;
     align-items: center;
     position: fixed;
-    padding: 2vh 10vw;
+    padding: 1vh 10vw;
     width: 100%;
     z-index: 1111;
+
     @media screen and (max-width:1024px) {
-        padding: 5vh 5vw;
+        padding: 2vh 5vw;
     }
+}
+.stickyNav{
+  top: 0;
+  transition: .400s ease-in;
+  background: #232424;
 }
 .logo{
     width: calc(100% - 70%);
@@ -42,6 +48,7 @@
     list-style-type: none;
     display: flex;
     gap: 2vw;
+
     @media screen and (max-width: 768px) {
         flex-direction: column;
         margin: 5vh 0;
@@ -70,7 +77,6 @@
     border-radius: 40px;
     background-color: transparent;
     transition: background-color 0.3s, color 0.3s;
-  
     @media (max-width: 768px) {
       display: block;
       text-align: center;

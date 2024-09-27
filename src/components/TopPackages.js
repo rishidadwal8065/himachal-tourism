@@ -5,7 +5,7 @@ import PackageCard from './PackageCard';
 
 const TopPackages = () => {
   return (
-    <section className="top-packages">
+    <section  id="packages" className="top-packages">
       <div className="heading">
       <span className="small-heading">
           <BiSolidPlaneAlt color="blue" size={"25px"} /> 

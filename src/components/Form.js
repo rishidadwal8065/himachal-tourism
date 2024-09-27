@@ -1,120 +1,131 @@
 "use client"
-import React,{useState} from 'react'
-import "@/styles/Form.css"
+import React, { useState } from 'react';
+import "@/styles/Form.css";
+
 const Form = () => {
-  const [formData, setFormData] = useState({
-    fullName: '',
-    email: '',
-    phone: '',
-    people: '',
-    fromDate: '',
-    toDate: '',
-    message: '',
-  });
+  const [formStatus, setFormStatus] = useState(null); // Track form status
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  async function handleSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-    const response = await fetch('/api/submit-enquiry', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData),
-    });
+    // Append access key
+    formData.append("access_key", "1657478b-085d-4801-b4b5-368329e3b44b");
 
-    const result = await response.json();
-    if (result.success) {
-      alert('Your enquiry has been submitted!');
-    } else {
-      alert('Something went wrong. Please try again.');
+    // Convert FormData to JSON
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    try {
+      // Make fetch request
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: json
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        console.log(result);
+        setFormStatus('success'); // Set success status
+        event.target.reset(); // Reset the form fields
+
+        // Automatically clear the success message after 20 seconds
+        setTimeout(() => {
+          setFormStatus(null);
+        }, 5000); // 20 seconds
+      } else {
+        console.error(result);
+        setFormStatus('error'); // Set error status
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error.message);
+      setFormStatus('error'); // Handle network or fetch errors
     }
-  };
+  }
 
   return (
     <>
-    <form className="form" onSubmit={handleSubmit}>
-      <h2>Send Your Enquiry Now!</h2>
-      <p>Our Travel Expert Will Call You as soon as possible.</p>
+      <form onSubmit={handleSubmit} className="form">
+        <h2>Send Your Enquiry Now!</h2>
+        <p>Our Travel Expert Will Call You as soon as possible.</p>
 
-      <label htmlFor="fullName">Full Name</label><br />
-      <input
-        type="text"
-        id="fullName"
-        name="fullName"
-        placeholder="Enter a name"
-        value={formData.fullName}
-        onChange={handleChange}
-        required
-      /><br /><br />
+        <label htmlFor="fullName">Full Name</label><br />
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          placeholder="Enter a name"
+          required
+        /><br /><br />
 
-      <label htmlFor="email">Email</label><br />
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="Enter an email"
-        value={formData.email}
-        onChange={handleChange}
-        required
-      /><br /><br />
+        <label htmlFor="email">Email</label><br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter an email"
+          required
+        /><br /><br />
 
-      <label htmlFor="phone">Phone Number</label><br />
-      <input
-        type="tel"
-        id="phone"
-        name="phone"
-        placeholder="+91 9876543210"
-        value={formData.phone}
-        onChange={handleChange}
-        required
-      /><br /><br />
+        <label htmlFor="phone">Phone Number</label><br />
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Enter Your mobile no."
+          required
+        /><br /><br />
 
-      <label htmlFor="people">No of People</label><br />
-      <input
-        type="number"
-        id="people"
-        name="people"
-        placeholder="10"
-        value={formData.people}
-        onChange={handleChange}
-        min="1"
-        required
-      /><br /><br />
+        <label htmlFor="people">No of People</label><br />
+        <input
+          type="number"
+          id="people"
+          name="people"
+          placeholder="10"
+          min="1"
+          required
+        /><br /><br />
 
+        <label htmlFor="message">Message</label><br />
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          placeholder="Type here..."
+          required
+        ></textarea><br /><br />
 
+        <div className="contactButton">
+          <button style={{ width: "100%", textAlign: "center" }} type="submit">Submit</button>
+        </div>
 
-      <label htmlFor="message">Message</label><br />
-      <textarea
-        id="message"
-        name="message"
-        rows="4"
-        placeholder="Type here..."
-        value={formData.message}
-        onChange={handleChange}
-        required
-      ></textarea><br /><br />
+        {formStatus === 'success' && <p className="success-message">Form submitted successfully!</p>}
+        {formStatus === 'error' && <p className="error-message">There was an error submitting the form. Please try again later.</p>}
+      </form>
 
-      <div className="contactButton">
-          <button style={{width:"100%", textAlign:"center"}} type="submit">Submit</button>
-      </div>
-
-      {/* Add styling in JSX or external CSS */}
       <style jsx>{`
+        .success-message {
+          color: green;
+          margin-top: 10px;
+        }
+
+        .error-message {
+          color: red;
+          margin-top: 10px;
+        }
+
         .travel-date-container {
           margin-bottom: 16px;
         }
 
         .travel-dates {
           display: flex;
-          gap: 16px; /* Adjust gap between inputs */
+          gap: 16px;
           align-items: center;
           @media screen and (max-width: 900px) {
               flex-direction: column;
@@ -129,9 +140,8 @@ const Form = () => {
           padding: 5px;
         }
       `}</style>
-    </form>
     </>
   )
 }
 
-export default Form
+export default Form;

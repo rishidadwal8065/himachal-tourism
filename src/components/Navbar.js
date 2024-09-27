@@ -1,5 +1,5 @@
 "use client";
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -10,12 +10,27 @@ import "@/styles/Navbar.css";
 
 const Navbar = () => {
   const [check, setCheck] = useState(false);
+  const [stickyNav, checkStickyNav] = useState("navbar");
+  useEffect(() => {
+    window.addEventListener("scroll", stickyNavbar);
+
+    return () => {
+      window.removeEventListener("scroll", stickyNavbar);
+    };
+  }, []);
+  const stickyNavbar = () => {
+    if (window !== undefined) {
+      let windowHeight = window.scrollY;
+      windowHeight > 100 ? checkStickyNav("stickyNav") : checkStickyNav("");
+    }
+  };
   const toggleAnimation = () => {
+    !check ? checkStickyNav("stickyNav") : checkStickyNav("");
     setCheck(!check);    
   };
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar  ${stickyNav}`}>
       <div className="logo">
         <Link href="/">
           <Image src='/assests/logo.png' alt="Logo"
@@ -25,19 +40,19 @@ const Navbar = () => {
       </div>
       <div className={`${check ? "nav-hidden" : "right-side"}`}>
         <ul className="navLinks">
-          
-          <li>
-            <Link href="#about">About Us</Link>
+        <li>
+            <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="#services">Services</Link>
+            <Link href="#packages">Packages</Link>
           </li>
           <li>
-            <Link href="#expertise">Expertise</Link>
+            <Link href="#destinations">Destination</Link>
           </li>
           <li>
-            <Link href="/contact">Contact</Link>
+            <Link href="#deals">Deals</Link>
           </li>
+    
         </ul>
         <div className="contactButton">
           <button>

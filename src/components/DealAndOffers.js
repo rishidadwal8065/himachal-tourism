@@ -4,7 +4,7 @@ import { BiSolidPlaneAlt } from "react-icons/bi";
 import Image from "next/image";
 const DealAndOffers = () => {
   return (
-    <section id="about"className="deal-offers">
+    <section id="deals" className="deal-offers">
       <div className="heading">
         <span className="small-heading">
           <BiSolidPlaneAlt color="blue" size={"25px"} />
