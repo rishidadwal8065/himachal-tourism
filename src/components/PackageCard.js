@@ -58,7 +58,6 @@ const PackageCard = () => {
                     </span>
                     {service}
                   </li>
-                
                 ))}
               </ul>
             <div className="service-booking-buttons">
