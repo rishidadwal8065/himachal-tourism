@@ -60,8 +60,9 @@
     font-weight: 300;
 }
 .card .card-content h1{
+    font-size: clamp(14px, 2vw, 20px);
     font-family: var(--thick-font);
-    font-weight: 900;
+    font-weight: 700;
     color: #262626;
 }
 .card .card-content p{

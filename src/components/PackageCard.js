@@ -7,13 +7,14 @@ const PackageCard = () => {
   return (
     <section className="packageCardContainer">
       {packageData.map((packageItem) => (
+          <div className="">
         <main className="packageCard" key={packageItem.id}>
           <div className="image-container">
             <div className="upper-photo">
               <Image
                 src={packageItem.image}
                 alt={packageItem.title}
-                width={150}
+                width={180}
                 height={200}
               />
             </div>
@@ -21,13 +22,13 @@ const PackageCard = () => {
               <Image
                 src={packageItem.image}
                 alt={packageItem.title}
-                width={75}
+                width={90}
                 height={100}
               />
               <Image
                 src={packageItem.image}
                 alt={packageItem.title}
-                width={75}
+                width={90}
                 height={100}
               />
             </div>
@@ -70,6 +71,7 @@ const PackageCard = () => {
             </div>              
           </div>
         </main>
+    </div>
       ))}
     </section>
   

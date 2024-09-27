@@ -1,16 +1,25 @@
 
 .packageCardContainer{
     display: grid;
+    position: relative;
     grid-template-columns: 1fr 1fr;
-    width: fit-content;
+    place-items: center;
+    margin-top: 5vh;
     gap: 2vw;
+    @media screen and (max-width:700px){
+        grid-template-columns: 1fr;
+        margin-top: 5vh;
+    }
 }
 .packageCard{
     border-radius: 14px;
     box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.08);
-    padding: 3vh 1.5vw;
+    padding: 2vh 1vw;
     display: flex;
-    column-gap: 2vw;
+    column-gap: 1vw;
+    @media screen and (max-width: 950px) {
+        padding: 4vh 4vw;
+    }
 }
 .packageCard .image-container{
     height: 100%;
@@ -18,16 +27,26 @@
     box-sizing: border-box;
     display: grid;
     border-radius: 8px;
-    grid-template-rows: 200px 100px;
+    grid-template-rows: 200px 80px;
+    width: 100%;
+    @media screen and (min-width:700px) and (max-width: 950px) {
+        display: none;
+    }
+    @media screen and (max-width: 480px) {
+        display: none;
+    }
 }
 .upper-photo img{
     object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 .below-photo img{
     object-fit: cover;
     object-position: 0% 100%;
-    height: fit-content;
+    height: 100%;
+    width: 50%;
 }
 .card-content{
     display: flex;
@@ -35,15 +54,17 @@
     flex-wrap: wrap;
     font-weight: 600;
     font-family: var(--inter-font);
+
+    width: 100%;
 }
 .card-content h2{
     font-size: clamp(12px, 2vw, 16px);
 }
 .card-content p{
     font-family: var(--inter-font);
-    font-size: clamp(4px, 2vw, 14px);
+    font-size: clamp(8px, 2vw, 12px);
     color: var(--grey-color);
-    padding: 1.2vh 0;
+    padding: .5vh 0;
 }
 .card-content .pricing{
     display: flex;
@@ -51,44 +72,58 @@
     column-gap: .8vw;
     color: var(--blue-color);
 }
+.card-content .pricing h4{
+    color: #0868F8;
+    font-size: clamp(9px, 1.5vw, 14pxx);
+    font-weight: 600;
+}
 .card-content .pricing span{
     color: var(--grey-color);
-    font-size: clamp(10px, 1.5vw, 14px);
+    font-size: clamp(8px, 1.5vw, 12px);
     text-decoration: line-through;
 }
 .card-content .pricing h5{
     color: #0868F8;
-    font-size: clamp(10px, 1.5vw, 13px);
+    font-size: clamp(7px, 1.5vw, 10px);
     font-weight: 600;
 }
-.services{
-}
+
 .services li span{
     background: #34C759;
-    height: 20px;
-    width: 20px;
+    height: 18px;
+    width: 18px;
     border-radius: 50%;
     display: grid;
     place-items: center;
 }
 .services li{
     text-align: left;
+    width: 100%;
     display: flex;
     align-items: center;
     column-gap: 1vw;
     font-family: var(--inter-font);
     font-size: clamp(4px, 2vw, 12px);
     color: var(--grey-color);
-    padding: .8vh 0;
+    padding: .6vh 0;
     font-weight: 400;
 }
 .service-booking-buttons{
     display: flex;
     align-items: wrap
     ;
-    gap: 3vw;
+    gap: 2vw;
     margin-top: auto;
     justify-items: flex-end;
+    @media screen and (min-width: 600px )and (max-width:950px) {
+        margin-top: 10px;
+    }
+}
+.service-booking-buttons .contactButton{
+    @media screen and (max-width: 480px ) {
+        margin-top: 10px;
+        padding: 1.5vh 18px;
+    }
 }
 .service-booking-buttons .contactButton:nth-child(2){
     border: 1px solid var(--blue-color);

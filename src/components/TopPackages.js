@@ -18,9 +18,7 @@ const TopPackages = () => {
          <br />
          <p> Explore Himachal, Customize Tour Packages, Lowest Rates, Guaranteed Services.</p>
       </div>
-      <div className="packageCardContainer">
         <PackageCard/>  
-      </div>
     </section>
   )
 }
