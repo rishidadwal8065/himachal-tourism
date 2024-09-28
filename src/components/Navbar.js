@@ -36,18 +36,18 @@ const Navbar = () => {
           <Image src="/assests/logo.png" alt="Logo" width={50} height={50} />
         </Link>
       </div>
-      <div className={`${check ? "nav-hidden" : "right-side"}`}>
+      <div className={`  right-side ${check ? "nav-hidden" : ""}`}>
         <ul className="navLinks">
-          <li onClick={toggleAnimation} className={`${check ? "" : "nav-hidden"}`}>
+          <li onClick={toggleAnimation} >
             <Link  href="/">Home</Link>
           </li>
-          <li onClick={toggleAnimation} className={`${check ? "" : "nav-hidden"}`}> 
+          <li onClick={toggleAnimation}>
             <Link href="#packages">Packages</Link>
           </li>
-          <li onClick={toggleAnimation} className={`${check ? "" : "nav-hidden"}`}>
+          <li onClick={toggleAnimation}>
             <Link href="#destinations">Destination</Link>
           </li>
-          <li onClick={toggleAnimation} className={`${check ? "" : "nav-hidden"}`}>
+          <li onClick={toggleAnimation}>
             <Link href="#deals">Deals</Link>
           </li>
         </ul>

@@ -39,23 +39,7 @@ a,li{
 .hidden{
   display: none;
 }
-.nav-hidden{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  right: 0%;
-  background: linear-gradient(
-    to bottom, 
-    rgba(8, 104, 248, .20) 16.5%, 
-    rgba(8, 104, 248, .40) 55%
-  ),var(--blue-color);
-  transition: .3s all;
-  height: 100vh;
-  width: 100%;
-}
+
 .contactButton {
   display: flex;
   justify-content: space-between;

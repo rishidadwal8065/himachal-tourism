@@ -34,14 +34,12 @@
     @media screen and (max-width: 768px) {
       position: absolute; 
       top: 0;
-      right: -100%;
-
-    
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background: var(--blue-color);
-  height: 100vh;
+      right: -100%; 
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: var(--blue-color);
+      height: 100vh;
     }
 }
 .navLinks {
@@ -112,3 +110,7 @@
   .nav-closer{
     display: none;
   }
+  
+ .right-side.nav-hidden{
+  right: 0;
+ }
