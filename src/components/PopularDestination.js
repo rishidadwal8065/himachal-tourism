@@ -2,9 +2,11 @@ import React from "react";
 import "@/styles/PopularDestination.css";
 import { BiSolidPlaneAlt } from "react-icons/bi";
 import Image from "next/image";
+import HappyCustomerCard from "./HappyCustomerCard";
 const PopularDestination = () => {
   return (
-    <section id="destinations" className="popular-destination">
+    <>
+        <section id="destinations" className="popular-destination">
       <div className="heading">
         <span className="small-heading">
           <BiSolidPlaneAlt color="blue" size={"25px"} />
@@ -72,7 +74,35 @@ const PopularDestination = () => {
           </li>
         </ul>
       </main>
+      
     </section>
+    <section className="customer-card-container">
+    <HappyCustomerCard 
+        icon="/assests/customer-icon.png"
+        heading="30000+"
+        para="Happy customers across 30,000+ experiences"
+      />
+      
+      <HappyCustomerCard 
+        icon="/assests/rating-icon.png"
+        heading="4.5/5"
+        para="10,000+ verified reviews with 90% excellent score"
+      />
+      
+      <HappyCustomerCard 
+        icon="/assests/world-icon.png"
+        heading="In the media"
+        para="Recommended by Ministry of Tourism, lata, Himachal Tourism and others."
+      />
+      
+      <HappyCustomerCard 
+        icon="/assests/customer-service-icon.png"
+        heading="24x7"
+        para="Have a question? Live chat with local experts anywhere, anytime"
+      />
+    </section>
+    </>
+
   );
 };
 

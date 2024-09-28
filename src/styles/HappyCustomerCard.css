@@ -1,0 +1,32 @@
+.customer-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-family: var(--inter-font);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.08);
+    padding: 2vh 1vw;
+    text-align: center;
+    border-radius: 14px;
+    gap: 2vh;
+
+      @media screen and (max-width:500px) {
+        padding: 2vh 4vw;
+
+      }
+ 
+}
+.customer-card .icon{
+    width: 20%;
+}
+
+.customer-card h1{
+    font-weight: 600;
+    font-size: clamp(18px, 2vw, 24px);
+}
+.customer-card p{
+    font-weight: 400;
+    font-size: clamp(11px, 2vw, 13px);
+}

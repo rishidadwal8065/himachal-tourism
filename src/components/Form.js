@@ -100,9 +100,9 @@ const Form = () => {
           required
         ></textarea><br /><br />
 
-        <div className="contactButton">
-          <button style={{ width: "100%", textAlign: "center" }} type="submit">Submit</button>
-        </div>
+        <a type="submit" className="contactButton">
+          <button style={{ width: "100%", textAlign: "center" }} >Submit</button>
+        </a>
 
         {formStatus === 'success' && <p className="success-message">Form submitted successfully!</p>}
         {formStatus === 'error' && <p className="error-message">There was an error submitting the form. Please try again later.</p>}

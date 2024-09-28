@@ -1,5 +1,5 @@
 "use client";
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -26,21 +26,19 @@ const Navbar = () => {
   };
   const toggleAnimation = () => {
     !check ? checkStickyNav("stickyNav") : checkStickyNav("");
-    setCheck(!check);    
+    setCheck(!check);
   };
 
   return (
     <nav className={`navbar  ${stickyNav}`}>
       <div className="logo">
         <Link href="/">
-          <Image src='/assests/logo.png' alt="Logo"
-            width={50}            
-            height={50}  />
+          <Image src="/assests/logo.png" alt="Logo" width={50} height={50} />
         </Link>
       </div>
       <div className={`${check ? "nav-hidden" : "right-side"}`}>
         <ul className="navLinks">
-        <li>
+          <li>
             <Link href="/">Home</Link>
           </li>
           <li>
@@ -52,21 +50,26 @@ const Navbar = () => {
           <li>
             <Link href="#deals">Deals</Link>
           </li>
-    
         </ul>
-        <div className="contactButton">
-          <button>
-            (91) 9876543210
-          </button>
+        <a href="tel:+91 7836098136">
+          <div className="contactButton">
+            <button>(91) 9876543210</button>
             <FaPhoneAlt color="white" />
-        </div>
+          </div>
+        </a>
       </div>
       <div className="nav-mobile">
-        <div onClick={toggleAnimation} className={`nav-icon ${check ? "hidden" : ""}`}>
-          <IoReorderThreeOutline size={"40px"} color="white"/>
+        <div
+          onClick={toggleAnimation}
+          className={`nav-icon ${check ? "hidden" : ""}`}
+        >
+          <IoReorderThreeOutline size={"40px"} color="white" />
         </div>
-        <div onClick={toggleAnimation} className={`nav-icon ${!check ? "hidden" : ""}`}>
-          <IoMdClose size={"40px"}  color="white"/>
+        <div
+          onClick={toggleAnimation}
+          className={`nav-icon ${!check ? "hidden" : ""}`}
+        >
+          <IoMdClose size={"40px"} color="white" />
         </div>
       </div>
     </nav>
