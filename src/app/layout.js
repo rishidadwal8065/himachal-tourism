@@ -2,7 +2,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-
+import { FaWhatsapp } from "react-icons/fa";
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -20,12 +20,18 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const phoneNumber = '+917836098136'
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Navbar/>
         {children}
         <Footer/>
+        <div className="whatsapp">
+            <a  href={`https://wa.me/${phoneNumber}`}
+        target="_blank"
+        rel="noopener noreferrer"> <FaWhatsapp size={40}/></a>
+        </div>
       </body>
     </html>
   );

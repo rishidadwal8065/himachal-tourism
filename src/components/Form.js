@@ -37,7 +37,7 @@ const Form = () => {
         // Automatically clear the success message after 20 seconds
         setTimeout(() => {
           setFormStatus(null);
-        }, 5000); // 20 seconds
+        }, 20000); // 20 seconds
       } else {
         console.error(result);
         setFormStatus('error'); // Set error status
@@ -77,7 +77,9 @@ const Form = () => {
           type="tel"
           id="phone"
           name="phone"
-          placeholder="Enter Your mobile no."
+          placeholder="Enter Your 10-digit mobile no."
+          pattern="[0-9]{10}" // Regex for 10 digits
+          title="Phone number must be exactly 10 digits"
           required
         /><br /><br />
 
@@ -100,9 +102,9 @@ const Form = () => {
           required
         ></textarea><br /><br />
 
-        <a type="submit" className="contactButton">
-          <button style={{ width: "100%", textAlign: "center" }} >Submit</button>
-        </a>
+        <div className="contactButton">
+          <button style={{ width: "100%", textAlign: "center" }} type="submit">Submit</button>
+        </div>
 
         {formStatus === 'success' && <p className="success-message">Form submitted successfully!</p>}
         {formStatus === 'error' && <p className="error-message">There was an error submitting the form. Please try again later.</p>}

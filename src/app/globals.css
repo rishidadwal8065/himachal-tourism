@@ -20,6 +20,17 @@ a,li{
   text-decoration: none;
   list-style: none;
 }
+.whatsapp{
+  display: grid;
+  place-items: center;
+  background: green;
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  position: fixed;
+  bottom: 10vh;
+  right: 10vw;
+}
 .link-text{
   font-family: "Figtree", sans-serif;
   font-optical-sizing: auto;
@@ -75,6 +86,7 @@ button {
 .contactButton:hover {
   background-color: darkblue;
 }
+
 .get-in-touch-mob-version{
   display: none;
   @media screen and (max-width:768px) {
