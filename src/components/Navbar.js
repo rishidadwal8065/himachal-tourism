@@ -38,16 +38,16 @@ const Navbar = () => {
       </div>
       <div className={`${check ? "nav-hidden" : "right-side"}`}>
         <ul className="navLinks">
-          <li>
-            <Link href="/">Home</Link>
+          <li onClick={toggleAnimation} className={`${check ? "" : "nav-hidden"}`}>
+            <Link  href="/">Home</Link>
           </li>
-          <li>
+          <li onClick={toggleAnimation} className={`${check ? "" : "nav-hidden"}`}> 
             <Link href="#packages">Packages</Link>
           </li>
-          <li>
+          <li onClick={toggleAnimation} className={`${check ? "" : "nav-hidden"}`}>
             <Link href="#destinations">Destination</Link>
           </li>
-          <li>
+          <li onClick={toggleAnimation} className={`${check ? "" : "nav-hidden"}`}>
             <Link href="#deals">Deals</Link>
           </li>
         </ul>
