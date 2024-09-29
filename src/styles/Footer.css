@@ -33,6 +33,8 @@
 }
 
 .footer .footer-content .content{
+    color: #ffffff;
+    font-family: var(--thick-font);
     width: 100%;
 }
 .footer .footer-content .content h1{
@@ -42,8 +44,9 @@
 .footer .left .content p{
     font-size: clamp(8px, 2vw, 12px);
     width: 100%;
-    letter-spacing: 1px;
     line-height: 18px;
+    font-family: var(--inter-font);
+    letter-spacing: 2px;
 }
 .social-icon{
     display: flex;

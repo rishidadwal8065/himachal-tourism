@@ -1,7 +1,7 @@
 import React from "react";
 import "@/styles/DealCard.css";
 import Image from "next/image";
-const DealCard = () => {
+const DealCard = ({offerName, description}) => {
   return (
     <div className="card">
                 <div className="card-image">
@@ -15,13 +15,15 @@ const DealCard = () => {
                 </div>
 
                 <div className="card-content">
-                  <h5>Bank Offers</h5>
-                  <h1>Get upto 30% instant discount</h1>
-                  <p>Get discount on flights, hotels and holiday packages with HDFC bank credit card.</p>
+                  <h5>Limited Time Offers</h5>
+                  <h1>{offerName}</h1>
+                  <p>{description}</p>
                   <div className="service-booking-buttons">
+                    <a href="#">
                     <div className="contactButton">
                       <button>Book Now</button>
                     </div>
+                    </a>
                   </div>
                 </div>
           </div>

@@ -29,7 +29,8 @@ a,li{
   width: 70px;
   position: fixed;
   bottom: 7vh;
-  right: 7vw;
+  right: 3vw;
+  z-index: 111111111;
 }
 .link-text{
   font-family: "Figtree", sans-serif;

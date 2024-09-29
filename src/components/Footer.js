@@ -47,16 +47,16 @@ const Footer = () => {
       <main className="footer-content middle">
         <ul>
           <li>
-            <Link href="#about">Home</Link>
+            <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="#services">Destination</Link>
+            <Link href="#packages">Packages</Link>
           </li>
           <li>
-            <Link href="#expertise">Services</Link>
+            <Link href="#destinations">Destination</Link>
           </li>
           <li>
-            <Link href="/contact">About</Link>
+            <Link href="#deals">Deals</Link>
           </li>
         </ul>
         <ul>

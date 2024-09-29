@@ -16,10 +16,10 @@ const DealAndOffers = () => {
       
       <article className="card-container">
         <div className="card-wrapper">
-       <DealCard/>
-        <DealCard/>
-        <DealCard/>
-        <DealCard/>
+       <DealCard offerName="MANALI VOLVO PACKAGE" description="Get discount on MANALI VOLVO PACKAGE, hotels and holiday packages" />
+        <DealCard  offerName="SHIMLA MANALI TOUR" description="Get discount on SHIMLA MANALI TOUR, hotels and holiday packages" />
+        <DealCard  offerName="HIMACHAL HONEYMOON PACKAGE" description="Get discount on HIMACHAL HONEYMOON PACKAGE, hotels and holiday packages" />
+        <DealCard  offerName="Shimla tour Package" description="Get discount on Shimla tour Package, hotels and holiday packages" />
         </div>
       </article>
     </section>
