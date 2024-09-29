@@ -3,7 +3,7 @@ import "@/styles/PackageCard.css";
 import Image from "next/image";
 import packageData from "../../public/PackageData/packageData.json"; // Import the JSON file
 import RightTick from "../../public/assests/right-tick.png"
-
+import Link from "next/link";
 const PackageCard = () => {
   return (
     <section className="packageCardContainer">
@@ -13,7 +13,7 @@ const PackageCard = () => {
             <div className="image-container">
               <div className="upper-photo">
                 <Image
-                  src={packageItem.image}
+                  src={packageItem.image1}
                   alt={packageItem.title}
                   width={180}
                   height={200}
@@ -21,13 +21,13 @@ const PackageCard = () => {
               </div>
               <div className="below-photo">
                 <Image
-                  src={packageItem.image}
+                  src={packageItem.image2}
                   alt={packageItem.title}
                   width={90}
                   height={100}
                 />
                 <Image
-                  src={packageItem.image}
+                  src={packageItem.image3}
                   alt={packageItem.title}
                   width={90}
                   height={100}
@@ -62,9 +62,12 @@ const PackageCard = () => {
               </ul>
 
               <div className="service-booking-buttons">
-                <div className="contactButton">
-                  <button>Enquiry Now</button>
-                </div>
+                <Link href="/">
+                  <div className="contactButton">
+                    <button>Enquiry Now</button>
+                  </div>
+                </Link>
+             
                 <div className="contactButton">
                   <a href="tel:+91 7836098136"><button>Call Now</button></a>
                 </div>

@@ -1,21 +1,24 @@
-import React from 'react'
+"use client"
+import React, {useState, useEffect} from 'react'
 import '@/styles/HeroSection.css'
+import Image from 'next/image'
 import Form from "../components/Form"
+import { FaVideo } from 'react-icons/fa'
+import Carousel from './Carousel'
 const HeroSection = () => {
   return (
-   <section className="hero-section">
-        <main className="content">
-              <h1>Discover the Majestic Beauty of Himachal Pradesh</h1>
-              <p>Explore stunning landscapes and thrilling adventures in the heart of the Himalayas.</p>
-              <div className="contactButton">
-                <button>Plan Your Trip</button>
-              </div>
-        </main>
+    <>
+      <section className="hero-section">
+        <div className="carousel-hero-section">
+          <Carousel/>
+        </div>
         <div className="form-in-hero-section">
         <Form/>
         </div>
-   </section>
+   </section></>
+ 
   )
+  
 }
 
 export default HeroSection

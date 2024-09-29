@@ -12,7 +12,9 @@
     }
 }
 .packageCard{
+    transition: .9s ease all;
     border-radius: 14px;
+    background-size: 400% 400%; 
     box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.08);
     padding: 2vh 1vw;
     display: flex;
@@ -21,20 +23,43 @@
         padding: 4vh 4vw;
     }
 }
+.packageCard:hover{
+    background: linear-gradient(120deg,  rgb(254, 254, 254), #051d3c, #041a34);
+    animation: roamingBackground 3s ease infinite;
+    background-size: 400% 400%; 
+    background-position: 100% 50%;
+    color: white;
+
+}
+.packageCard:hover .image-container img{
+    transform: scale(1.3);
+    transition: transform 0.3s ease-in-out;
+        position: relative;
+}
+.packageCard:hover p{
+    color: white;
+}
 .packageCard .image-container{
     height: 100%;
     overflow: hidden;
     box-sizing: border-box;
     display: grid;
     border-radius: 8px;
-    grid-template-rows: 200px 80px;
-    width: 100%;
+    grid-template-rows: 200px 100px;
+    grid-template-columns: 1fr;
+    width: 230px;
     @media screen and (min-width:700px) and (max-width: 950px) {
         display: none;
     }
     @media screen and (max-width: 480px) {
         display: none;
     }
+}
+.packageCard .image-container img{
+    /* transform: scale(1); */
+}
+.upper-photo{
+    /* border: 1px solid red; */
 }
 .upper-photo img{
     object-fit: cover;
@@ -43,8 +68,7 @@
 }
 
 .below-photo img{
-    object-fit: cover;
-    object-position: 0% 100%;
+    object-position: 50% 50%;
     height: 100%;
     width: 50%;
 }
@@ -133,3 +157,15 @@
 .service-booking-buttons .contactButton:nth-child(2) button{
     color: var(--blue-color);
 }
+
+@keyframes roamingBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+  }
