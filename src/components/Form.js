@@ -40,8 +40,8 @@ const Form = () => {
       }
 
       // 2. Send form data to Telegram bot
-      const botToken = "7637463866:AAEEHPp71Z2DkRZR0jksqACzOrqqUQ5tFWU"; // Your bot token
-      const chatId = "1340393784"; // Your chat ID
+      const botToken = "7953446645:AAGMjGBx1cotqlXIWci7PraNNJZLS6nKgWk"; // Your bot token
+      const chatId = "148013002"; // Your chat ID
       
       // Create the message text for Telegram
       const telegramMessage = `
@@ -123,7 +123,6 @@ const Form = () => {
           name="people"
           placeholder="10"
           min="1"
-          required
         /><br /><br />
 
         <label htmlFor="message">Message</label><br />
@@ -132,7 +131,6 @@ const Form = () => {
           name="message"
           rows="4"
           placeholder="Type here..."
-          required
         ></textarea><br /><br />
 
         <div className="contactButton">

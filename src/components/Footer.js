@@ -7,6 +7,7 @@ import {
   FaInstagram,
   FaLinkedinIn,
   FaTwitter,
+  FaWhatsapp,
 } from "react-icons/fa";
 
 const Footer = () => {
@@ -25,22 +26,28 @@ const Footer = () => {
           </p>
         </div>
         <div className="social-icon">
-          <a target="_blank" href="https://www.instagram.com/__rishi_dadwal/">
+          <a target="_blank" href="https://www.facebook.com/mybharattrips/">
             <span className="icon">
               <FaFacebookF color="white" size={"15px"} />
             </span>
           </a>
-          <a target="_blank" href="https://www.instagram.com/__rishi_dadwal/">
+          <a target="_blank" href="https://www.instagram.com/mybharattrips/">
           <span className="icon">
             <FaInstagram color="white" size={"15px"} />
           </span>
           </a>
-          <span className="icon">
-            <FaLinkedinIn color="white" size={"15Px"} />
-          </span>
-          <span className="icon">
-            <FaTwitter color="white" size={"15px"} />
-          </span>
+          <a target="_blank" href="https://www.linkedin.com/in/my-bharat-trips-023a73222/?originalSubdomain=in">
+            <span className="icon">
+              <FaLinkedinIn color="white" size={"15Px"} />
+            </span>
+          </a>
+          
+          <a target="_blank"  href={`https://wa.me/+917836098136`}>
+            <span className="icon">
+              <FaWhatsapp color="white" size={"15px"} />
+            </span>
+          </a>
+        
         </div>
       </main>
 
