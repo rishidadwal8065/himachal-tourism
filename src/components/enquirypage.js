@@ -1,6 +1,6 @@
 import React from 'react'
 import "../styles/enquirypage.css"
-import { BiArrowToBottom } from 'react-icons/bi'
+import Form from './Form'
 const enquirypage = () => {
   return (
     <section className="enquiry-page">
@@ -8,11 +8,9 @@ const enquirypage = () => {
             <h1>Fill Below Form For Enquiry</h1>
             <p>Fill The Form And Get all information regarding the packages and discounts</p>
         </div>
-        <a href="#get-in-touch">
-            <span className="form-navigator">
-                <BiArrowToBottom color='black' size={50}/>
-            </span>
-        </a>
+        <div className="form-in-hero-section">
+        <Form/>
+        </div>
     </section>
   )
 }

@@ -13,7 +13,8 @@ const HeroSection = () => {
         <div className="form-in-hero-section">
         <Form/>
         </div>
-   </section></>
+      </section>
+    </>
  
   )
   
