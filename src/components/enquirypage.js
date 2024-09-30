@@ -17,4 +17,4 @@ const enquirypage = () => {
   )
 }
 
-export default enquirypage
+export default enquirypage;
