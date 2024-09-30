@@ -116,6 +116,44 @@
         "Separate cab for 10 days",
         "Free wifi"
       ]
+    },
+    {
+      "id": 7,
+      "title": "Manali Honeymoon Tour",
+      "duration": "03 Nights / 04 Days",
+      "placesCovered": "Manali",
+      "price": "₹ 45,000",
+      "originalPrice": "₹ 50,999",
+      "discount": "GET 10% OFF *",
+      "image1": "/assests/manali-4.jpg",
+      "image2": "/assests/shimla-2.jpg",
+      "image3": "/assests/shimla-1.jpg",
+      "services": [
+        "Accommodation for 2 nights",
+        "sightseen",
+        "4 breakfasts and 3 Dinner in Hotel.",
+        "Separate cab for 3 days",
+        "Free wifi"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Manali Kasol Manalikaran Tour By Volvo",
+      "duration": "09 Nights / 10 Days",
+      "placesCovered": "Manali-Kasol-Manalikaran" ,
+      "price": "₹ 45,000",
+      "originalPrice": "₹ 50,999",
+      "discount": "GET 10% OFF *",
+      "image1": "/assests/kasol.jpg",
+      "image2": "/assests/himachal-1.jpg",
+      "image3": "/assests/himachal-2.jpg",
+      "services": [
+        "sightseen",
+        "9 Nights accommodation on twin sharing basis",
+        "9 bed tea 9 breakfast and 9 Dinner in Hotel",
+        "Separate cab for 10 days",
+        "Free wifi"
+      ]
     }
   ]
   
