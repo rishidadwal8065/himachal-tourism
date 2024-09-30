@@ -20,9 +20,7 @@ const Footer = () => {
         <div className="content">
           <h1>Himachal Tourism</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Pellentesque fringilla faucibus consectetur in. Curabitur eu, nunc
-            suspe
+              address: near stop n shop, Kelti, Himachal Pradesh 171003
           </p>
         </div>
         <div className="social-icon">
@@ -74,7 +72,7 @@ const Footer = () => {
             <Link href="#services">Privacy Policy</Link>
           </li>
           <li>
-            <Link href="#expertise">Conatact Us</Link>
+            <Link href="#expertise">Contact Us</Link>
           </li>
           <li>
             <Link href="/contact">Discounts</Link>
@@ -84,11 +82,11 @@ const Footer = () => {
       <main className="footer-content right">
         <div className="content">
           <h1>Subscribe Newsletter</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur doler adipiscing elit.</p>
+          <p>Subscribe to get exciting deals and offers</p>
         </div>
         <div className="container">
           <input type="text" placeholder="Enter Email" />
-          <input type="submit" value="Subcribe" />
+          <input type="submit" value="Subscribe" />
         </div>
       </main>
     </footer>
