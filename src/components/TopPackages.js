@@ -1,5 +1,5 @@
 import React from 'react'
-import "@/styles/TopPackages.css"
+import "../styles/TopPackages.css"
 import { BiSolidPlaneAlt } from "react-icons/bi";
 import PackageCard from './PackageCard';
 

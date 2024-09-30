@@ -6,7 +6,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { IoReorderThreeOutline } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
 
-import "@/styles/Navbar.css";
+import "../styles/Navbar.css";
 
 const Navbar = () => {
   const [check, setCheck] = useState(false);

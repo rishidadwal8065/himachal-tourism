@@ -1,5 +1,5 @@
 import React from "react";
-import "@/styles/WhyChooseUs.css";
+import "../styles/WhyChooseUs.css";
 import Image from "next/image";
 import { BiSolidPlaneAlt } from "react-icons/bi";
 

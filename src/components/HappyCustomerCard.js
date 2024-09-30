@@ -1,5 +1,5 @@
 import React from 'react'
-import "@/styles/HappyCustomerCard.css"
+import "../styles/HappyCustomerCard.css"
 import Image from 'next/image'
 
 const HappyCustomerCard = ({ icon="/assests/customer-icon.png", heading="happy", para="this is details "}) => {

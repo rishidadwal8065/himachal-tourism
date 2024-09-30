@@ -1,9 +1,9 @@
-import TopPackages from "@/components/TopPackages";
+import TopPackages from "../components/TopPackages";
 import HeroSection from "../components/HeroSection"
-import GetInTouch from "@/components/GetInTouch";
-import PopularDestination from "@/components/PopularDestination";
-import DealAndOffers from "@/components/DealAndOffers";
-import WhyChooseUs from "@/components/WhyChooseUs";
+import GetInTouch from "../components/GetInTouch";
+import PopularDestination from "../components/PopularDestination";
+import DealAndOffers from "../components/DealAndOffers";
+import WhyChooseUs from "../components/WhyChooseUs";
 
 export default function Home() {
   return (

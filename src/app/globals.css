@@ -120,3 +120,10 @@ button {
       background-position: 0% 50%;
   }
 }
+
+.success-message{
+  color: green;
+}
+.error-message{
+  color: red;
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import "@/styles/Footer.css";
+import "../styles/Footer.css";
 import Image from "next/image";
 import {
   FaFacebookF,

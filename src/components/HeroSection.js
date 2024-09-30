@@ -1,9 +1,7 @@
 "use client"
-import React, {useState, useEffect} from 'react'
-import '@/styles/HeroSection.css'
-import Image from 'next/image'
+import React from 'react'
+import '../styles/HeroSection.css'
 import Form from "../components/Form"
-import { FaVideo } from 'react-icons/fa'
 import Carousel from './Carousel'
 const HeroSection = () => {
   return (

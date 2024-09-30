@@ -1,5 +1,5 @@
 import React from "react";
-import "@/styles/PackageCard.css";
+import "../styles/PackageCard.css";
 import Image from "next/image";
 import packageData from "../../public/PackageData/packageData.json"; // Import the JSON file
 import RightTick from "../../public/assests/right-tick.png"
@@ -62,7 +62,7 @@ const PackageCard = () => {
               </ul>
 
               <div className="service-booking-buttons">
-                <Link href="/">
+                <Link href="/enquirypage">
                   <div className="contactButton">
                     <button>Enquiry Now</button>
                   </div>

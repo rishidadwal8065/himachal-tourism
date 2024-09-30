@@ -1,6 +1,6 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
-import "@/styles/Form.css";
+import "../styles/Form.css";
 
 const Form = () => {
   const [formStatus, setFormStatus] = useState(null); // Track form status
@@ -9,7 +9,7 @@ const Form = () => {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    // Append access key
+    // Append access key for Web3Forms
     formData.append("access_key", "652de30f-937e-4626-9dbd-e62c44ee6254");
 
     // Convert FormData to JSON
@@ -17,8 +17,8 @@ const Form = () => {
     const json = JSON.stringify(object);
 
     try {
-      // Make fetch request
-      const response = await fetch("https://api.web3forms.com/submit", {
+      // 1. Send form data to Web3Forms (for email)
+      const emailResponse = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -27,21 +27,54 @@ const Form = () => {
         body: json
       });
 
-      const result = await response.json();
+      const result = await emailResponse.json();
 
-      if (response.ok && result.success) {
+      if (emailResponse.ok && result.success) {
         console.log(result);
         setFormStatus('success'); // Set success status
         event.target.reset(); // Reset the form fields
-
-        // Automatically clear the success message after 20 seconds
-        setTimeout(() => {
-          setFormStatus(null);
-        }, 20000); // 20 seconds
       } else {
         console.error(result);
         setFormStatus('error'); // Set error status
+        return;
       }
+
+      // 2. Send form data to Telegram bot
+      const botToken = "7637463866:AAEEHPp71Z2DkRZR0jksqACzOrqqUQ5tFWU"; // Your bot token
+      const chatId = "1340393784"; // Your chat ID
+      
+      // Create the message text for Telegram
+      const telegramMessage = `
+      New Form Submission:
+      Name: ${object.fullName}
+      Email: ${object.email}
+      Phone: ${object.phone}
+      People: ${object.people}
+      Message: ${object.message}
+      `;
+
+      // Send message to Telegram
+      const telegramResponse = await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: telegramMessage,
+        }),
+      });
+
+      if (!telegramResponse.ok) {
+        console.error("Failed to send message to Telegram.");
+        setFormStatus('error'); // Handle Telegram error
+      }
+
+      // Automatically clear the success message after 20 seconds
+      setTimeout(() => {
+        setFormStatus(null);
+      }, 20000); // 20 seconds
+
     } catch (error) {
       console.error("Error submitting form:", error.message);
       setFormStatus('error'); // Handle network or fetch errors
@@ -78,7 +111,7 @@ const Form = () => {
           id="phone"
           name="phone"
           placeholder="Enter Your 10-digit mobile no."
-          pattern="[0-9]{10}" // Regex for 10 digits
+          pattern="[0-9]{10}"
           title="Phone number must be exactly 10 digits"
           required
         /><br /><br />
@@ -129,9 +162,6 @@ const Form = () => {
           display: flex;
           gap: 16px;
           align-items: center;
-          @media screen and (max-width: 900px) {
-              flex-direction: column;
-          }
         }
 
         .travel-dates label {
@@ -143,7 +173,7 @@ const Form = () => {
         }
       `}</style>
     </>
-  )
+  );
 }
 
 export default Form;

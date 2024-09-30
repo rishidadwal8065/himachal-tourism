@@ -1,7 +1,6 @@
 import React from "react";
-import "@/styles/DealAndOffers.css";
+import "../styles/DealAndOffers.css";
 import { BiSolidPlaneAlt } from "react-icons/bi";
-import Image from "next/image";
 import DealCard from "./DealCard";
 const DealAndOffers = () => {
   return (

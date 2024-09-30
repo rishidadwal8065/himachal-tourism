@@ -1,5 +1,5 @@
 import React from "react";
-import "@/styles/DealCard.css";
+import "../styles/DealCard.css";
 import Image from "next/image";
 const DealCard = ({offerName, description}) => {
   return (
@@ -19,7 +19,7 @@ const DealCard = ({offerName, description}) => {
                   <h1>{offerName}</h1>
                   <p>{description}</p>
                   <div className="service-booking-buttons">
-                    <a href="#">
+                    <a href="/enquirypage">
                     <div className="contactButton">
                       <button>Book Now</button>
                     </div>

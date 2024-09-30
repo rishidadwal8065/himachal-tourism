@@ -1,5 +1,5 @@
 import React from "react";
-import "@/styles/PopularDestination.css";
+import "../styles/PopularDestination.css";
 import { BiSolidPlaneAlt } from "react-icons/bi";
 import Image from "next/image";
 import HappyCustomerCard from "./HappyCustomerCard";
